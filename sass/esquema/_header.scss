@@ -1,0 +1,59 @@
+
+/* BACKGROUND GENERAL PARA EL SITIO */
+
+body {
+    max-width: 94rem;
+    background-color: $background;
+}
+
+/* HEADER */
+
+.header{
+    padding: 0.6rem 1.25rem;
+    background: $verde-azulado ;     
+    
+    margin: auto;
+
+    &__movil{ 
+        display: none  ;
+    }
+
+    @include estructuraFlex( row, space-between, center);
+
+    /*
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between; 
+    align-items: center;
+    */
+
+    &__nav{
+        font-size: 1rem;
+    
+        &__menu{
+            display: flex;  
+
+            &__item{
+
+                margin-right: 1.25rem;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                /* Cambio de color sobre el HOVER */
+                a{
+                    transition: color 0.4s;
+                    text-decoration: none;;
+                }
+                                
+                a:hover, a:active{
+                    background-color: rgba(180, 211, 41, 0.3);
+                    color: $rojo;  
+                }
+  
+            }        
+        }
+    }
+
+}    
+
+

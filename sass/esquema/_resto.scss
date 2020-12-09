@@ -1,0 +1,218 @@
+/* SECCIONES */
+.seccion-equipamiento, 
+.seccion-lugares, 
+.seccion-marcas, 
+.seccion-vestimenta {
+    color: $verde-obscuro ;
+    /*font-family: 'Montserrat', sans-serif; */
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin:48px;
+ }
+
+ //.seccion-lugares a { text-decoration: none;}
+
+
+/*  Datos de Contacto */
+.seccion-contacto{
+  /*font-family: 'Montserrat', sans-serif;*/
+ /* Sugerencia Flor */ 
+ /* width: 30%; */
+  margin: 3rem auto;  
+
+}
+
+.datos-contacto input{
+  height: 2.2rem;
+  margin: 0.5rem;
+  padding-left: 0.6rem ;
+  padding-right: 0.6rem;
+  border-style: none;
+}
+
+.datos-contacto .checkbox{
+  margin: 0.3rem;
+}
+
+.datos-contacto textarea{
+  border-radius: 5px;
+  height: 6.25rem;    
+  margin: 0.625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0.625rem;
+  border-style: none;
+}
+
+.datos-contacto .button{
+  color: $colorBtn;
+/*  font-family: 'Montserrat', sans-serif;*/
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: $verde-azulado;
+  width: 100%;
+  padding-top: 0.625rem;
+  height: 3.75rem;  
+}    
+
+
+ /* GRID PARA PAGINA VESTIMENTA */
+
+ .seccion-vestimenta{     
+     @include estructuraGrid ( repeat(2,1fr), 1.25rem, 1.25rem ); /* Va a servir para el resto de las secciones equipamiento, marcas */
+     /*
+     display: grid;
+     grid-template-columns: repeat(2,1fr) ;
+     grid-row-gap: 20px;
+     grid-column-gap: 20px;
+     */
+ }
+
+.titulo-1-1{
+    @extend %estiloTituloGaleria;
+  /*
+  padding: 10px;
+  text-align: center;
+  */
+}
+
+.galeria-1-1 ul{
+    @extend %estiloListaGaleria;
+  /*
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  */
+}
+
+
+.titulo-1-2{
+    @extend %estiloTituloGaleria;
+    /*
+    padding: 10px;
+    text-align: center;*/
+  }
+
+.galeria-1-2 ul{
+    @extend %estiloListaGaleria;
+    /*
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+  }
+
+  
+  .titulo-2-1{
+    @extend %estiloTituloGaleria;
+    /*
+    padding: 10px;
+    text-align: center;*/
+  }
+  
+  .galeria-2-1 ul{
+    @extend %estiloListaGaleria;
+    /*
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+  }
+  
+
+  .titulo-2-2{
+    @extend %estiloTituloGaleria;
+    /*
+    padding: 10px;
+    text-align: center;*/
+  }
+
+  .galeria-2-2 ul{
+    @extend %estiloListaGaleria;
+      /*
+      padding: 40px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      */
+    }
+    
+
+
+
+/* Agregado de MOVIMIENTO*/
+
+
+  /* Boton de formulario CONTACTO */
+  
+  @keyframes cambiar-color{
+    0%{
+        @include efectosBotonFormulario($verde-azulado, 100%);
+        //background: $verde-azulado;
+        //width: 100%;
+    }
+  
+    33%{
+        @include efectosBotonFormulario($background, 50%);      
+        //background:$background ;
+        //width: 50%;
+    }
+    66%{
+        @include efectosBotonFormulario($rojo, 60%); 
+        //background: $rojo ;
+        //width: 60%;
+    }
+    100%{
+        @include efectosBotonFormulario($verde-azulado, 100%);
+        //background: $verde-azulado;
+        //width: 100%;
+    }
+  }
+  
+  .efectos:hover{
+    background: turquoise;
+    animation-name: cambiar-color;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+  }
+  
+
+  /* Lugares - CARRUSEL */
+  .carrusel{
+    margin-top: 3.125rem;    
+  }
+
+  .carousel-item img{
+    border-radius: 0.94rem;
+  }
+
+  
+/*  FOOTER */
+.contenedor{
+  padding: 1rem 0;
+}
+
+.flex-footer {
+   /* font-family: 'Montserrat', sans-serif;*/
+    background-color: $verde-azulado;
+
+    @include estructuraFlex(row, space-around,  flex-start);
+    /*
+    display: flex;
+    flex-direction: row ; 
+    justify-content: space-around;
+    align-items: flex-start;
+    */
+}
+
+.flex-footer li{
+    font-size: 0.625rem;
+    line-height: 1.5rem;
+    color: $negro;
+}
+
+
+
+

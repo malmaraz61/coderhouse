@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;1,900&display=swap');
+
+/* Paleta de colores:
+   https://coolors.co/ed6a5a-f4f1bb-9bc1bc-5d576b-e6ebe0   
+*/
+
+/* RESETEO DE PROPIEDADES */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
+
+/* QUITAR SUBRAYADO Y VINETAS (en el caso que sea necesario)*/ 
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/* BACKGROUND GENERAL PARA EL SITIO */
+
+
+body {
+    background-color: #F4F1BB;
+}
+
+/* PROPIEDADES GENERALES PARA LOS TITULOS Y SUBTITULOS */
+
+h1{
+    color: #ED6A5A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+
+h4{
+    color:  #ED6A5A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;    
+    margin-bottom: 5px;
+}
+
+
+/* HEADER */
+
+header{
+    padding: 10px 20px;
+    background:  #9BC1BC ;
+}
+
+.contenedor{
+/*    width: 95%;*/
+    max-width: 1900px;
+    margin: auto;
+}
+
+.flex-header{
+   display: flex;
+   flex-direction: row;  /* Redundante pq es el valor por defecto. Solo para recordar la propiedad */
+   justify-content: space-between; /* space-around para el footer */
+   align-items: center;
+}
+
+.lista-nav {    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    list-style-type: none;
+    
+}
+
+.lista-nav li{
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.lista-nav ul{
+     display: flex;
+ }
+ 
+
+
+/*  FOOTER */
+.flex-footer {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #9BC1BC;
+
+    display: flex;
+    flex-direction: row ;  /* Redundante pq es el valor por defecto. Solo para recordar la propiedad */
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.flex-footer li{
+    font-size: 10px;
+    line-height: 1.5;
+    color: black;
+}
+
+
+/* SECCIONES */
+.seccion-equipamiento, 
+.seccion-lugares, 
+.seccion-marcas, 
+.seccion-vestimenta {
+    color: #3d5912 ;
+    font-family: 'Montserrat', sans-serif;
+    /*background-color: #8DD5F2;*/
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin:50px
+ }
+
+ .seccion-lugares a { text-decoration: none;}
+
+
+/*  Datos de Contacto */
+.seccion-contacto{
+  font-family: 'Montserrat', sans-serif;
+ /* Sugerencia Flor */ 
+ /* width: 30%; */
+  margin: 40px auto;  
+
+}
+
+.datos-contacto input{
+  height: 35px;
+  margin: 8px;
+  padding-left: 10px ;
+  padding-right: 10px;
+  border-style: none;
+}
+
+.datos-contacto .checkbox{
+  margin: 5px;
+}
+
+.datos-contacto textarea{
+  border-radius: 5px;
+  height: 100px;    
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  border-style: none;
+}
+
+.datos-contacto .button{
+  color: #5D576B;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #9BC1BC;
+  width: 100%;
+  /* padding-right: 10px; */
+  padding-top: 10px;
+  height: 60px;  
+}    
+
+
+ /* GRID PARA PAGINA VESTIMENTA */
+
+ .seccion-vestimenta{
+     
+     display: grid;
+     grid-template-columns: repeat(2,1fr) ;
+   /* Eliminado por sugerencia de Florencia */
+   /*  grid-template-rows: 70px 700px 70px 700px; */
+     grid-row-gap: 20px;
+     grid-column-gap: 20px;
+ }
+
+
+.titulo-1-1{
+  padding: 10px;
+  text-align: center;
+}
+
+.galeria-1-1 ul{
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.titulo-1-2{
+    padding: 10px;
+    text-align: center;
+  }
+
+.galeria-1-2 ul{
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  
+  .titulo-2-1{
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .galeria-2-1 ul{
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+
+  .titulo-2-2{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .galeria-2-2 ul{
+      padding: 40px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+
+
+
+/* Agregado de MOVIMIENTO*/
+
+
+  /* Menu de navegacion */
+
+.lista-nav li a{
+  transition: color 1s;
+}
+
+.lista-nav li a:hover{
+  color: #ED6A5A;  
+}
+
+
+  /* Boton de formulario CONTACTO */
+  
+  @keyframes cambiar-color{
+    0%{
+        background: #9BC1BC;
+        width: 100%;
+    }
+  
+    33%{
+        background:#F4F1BB ;
+        width: 50%;
+    }
+    66%{
+        background: #ED6A5A ;
+        width: 60%;
+    }
+    100%{
+        background: #9BC1BC;
+        width: 100%;
+    }
+  }
+  
+  .efectos:hover{
+    background: turquoise;
+    animation-name: cambiar-color;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+  }
+  
+
+  /* Lugares - CARRUSEL */
+  .carrusel{
+    margin-top: 50px;    
+  }
+
+  .carousel-item img{
+    border-radius: 15px;
+  }

@@ -1,0 +1,10 @@
+%estiloTituloGaleria{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+%estiloListaGaleria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
